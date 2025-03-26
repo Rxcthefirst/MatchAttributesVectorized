@@ -1,0 +1,52 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+### Define Attributes ###
+ex:attr1 a ex:Attribute ; rdfs:label "Loan Amount" ; ex:hasDescription "Total amount borrowed by the borrower." .
+ex:attr2 a ex:Attribute ; rdfs:label "Interest Rate" ; ex:hasDescription "The percentage charged on the loan amount by the lender." .
+ex:attr3 a ex:Attribute ; rdfs:label "Loan Term" ; ex:hasDescription "Duration for which the loan is granted, usually in years." .
+ex:attr4 a ex:Attribute ; rdfs:label "Monthly Payment" ; ex:hasDescription "The amount the borrower must pay each month towards the loan." .
+ex:attr5 a ex:Attribute ; rdfs:label "Loan Status" ; ex:hasDescription "The current status of the loan, e.g., active, paid, defaulted." .
+ex:attr6 a ex:Attribute ; rdfs:label "Lender Name" ; ex:hasDescription "The financial institution or person providing the loan." .
+ex:attr7 a ex:Attribute ; rdfs:label "Borrower Name" ; ex:hasDescription "The person or entity taking the loan." .
+ex:attr8 a ex:Attribute ; rdfs:label "Borrower Credit Score" ; ex:hasDescription "A numerical value representing the borrower's creditworthiness." .
+ex:attr9 a ex:Attribute ; rdfs:label "Origination Fee" ; ex:hasDescription "Fee charged by the lender at the time of loan initiation." .
+ex:attr10 a ex:Attribute ; rdfs:label "Down Payment" ; ex:hasDescription "The initial upfront amount paid when securing a loan." .
+ex:attr11 a ex:Attribute ; rdfs:label "Annual Income" ; ex:hasDescription "The total yearly income of the borrower." .
+ex:attr12 a ex:Attribute ; rdfs:label "Debt-to-Income Ratio" ; ex:hasDescription "The ratio of a borrower's total debt payments to income." .
+ex:attr13 a ex:Attribute ; rdfs:label "Employment Status" ; ex:hasDescription "The current employment situation of the borrower." .
+ex:attr14 a ex:Attribute ; rdfs:label "Loan Type" ; ex:hasDescription "The category of loan, e.g., mortgage, auto, personal." .
+ex:attr15 a ex:Attribute ; rdfs:label "APR" ; ex:hasDescription "Annual Percentage Rate including interest and fees." .
+ex:attr16 a ex:Attribute ; rdfs:label "Co-Signer Name" ; ex:hasDescription "The name of a person who co-signs the loan with the borrower." .
+ex:attr17 a ex:Attribute ; rdfs:label "Collateral Value" ; ex:hasDescription "The value of assets pledged to secure a loan." .
+ex:attr18 a ex:Attribute ; rdfs:label "Repayment Schedule" ; ex:hasDescription "The agreed timeline and method for repaying the loan." .
+ex:attr19 a ex:Attribute ; rdfs:label "Default Date" ; ex:hasDescription "The date on which the loan is classified as defaulted." .
+ex:attr20 a ex:Attribute ; rdfs:label "Loan Application Date" ; ex:hasDescription "The date the borrower applied for the loan." .
+ex:attr21 a ex:Attribute ; rdfs:label "Approval Status" ; ex:hasDescription "Indicates whether the loan was approved or rejected." .
+ex:attr22 a ex:Attribute ; rdfs:label "Interest Type" ; ex:hasDescription "The type of interest applied, e.g., fixed or variable." .
+ex:attr23 a ex:Attribute ; rdfs:label "Late Payment Fees" ; ex:hasDescription "Additional charges applied for missed payments." .
+ex:attr24 a ex:Attribute ; rdfs:label "Early Repayment Penalty" ; ex:hasDescription "Penalty imposed for paying off the loan early." .
+ex:attr25 a ex:Attribute ; rdfs:label "Loan Purpose" ; ex:hasDescription "The reason for taking out the loan." .
+
+### Define Entities ###
+ex:entity1 a ex:Entity ; rdfs:label "Loan" ; ex:hasDescription "A financial agreement in which money is borrowed and repaid with interest." .
+ex:entity2 a ex:Entity ; rdfs:label "Lender" ; ex:hasDescription "An individual or institution that provides loans." .
+ex:entity3 a ex:Entity ; rdfs:label "Borrower" ; ex:hasDescription "An individual or entity that takes out a loan." .
+ex:entity4 a ex:Entity ; rdfs:label "Credit Score" ; ex:hasDescription "A numerical assessment of a borrower's creditworthiness." .
+ex:entity5 a ex:Entity ; rdfs:label "Interest Rate" ; ex:hasDescription "The percentage of the principal charged by the lender for borrowing." .
+ex:entity6 a ex:Entity ; rdfs:label "Loan Repayment" ; ex:hasDescription "The process of paying back a borrowed loan over time." .
+ex:entity7 a ex:Entity ; rdfs:label "Loan Term" ; ex:hasDescription "The agreed-upon period during which the loan must be repaid." .
+ex:entity8 a ex:Entity ; rdfs:label "Collateral" ; ex:hasDescription "An asset pledged by the borrower to secure a loan." .
+ex:entity9 a ex:Entity ; rdfs:label "Loan Application" ; ex:hasDescription "A request made by a borrower to receive a loan." .
+ex:entity10 a ex:Entity ; rdfs:label "Debt-to-Income Ratio" ; ex:hasDescription "A metric used to assess the risk associated with a borrower’s debt obligations." .
+ex:entity11 a ex:Entity ; rdfs:label "Monthly Payment" ; ex:hasDescription "The amount a borrower pays each month to repay a loan." .
+ex:entity12 a ex:Entity ; rdfs:label "Loan Approval" ; ex:hasDescription "The process of evaluating and approving a loan application." .
+ex:entity13 a ex:Entity ; rdfs:label "Payment Default" ; ex:hasDescription "A situation where the borrower fails to make payments on time." .
+ex:entity14 a ex:Entity ; rdfs:label "Origination Fee" ; ex:hasDescription "A fee charged by lenders to process a new loan." .
+ex:entity15 a ex:Entity ; rdfs:label "Down Payment" ; ex:hasDescription "A partial upfront payment made before financing the remaining amount." .
+ex:entity16 a ex:Entity ; rdfs:label "Co-Signer" ; ex:hasDescription "A person who agrees to be responsible for a borrower's debt if they default." .
+ex:entity17 a ex:Entity ; rdfs:label "Repayment Schedule" ; ex:hasDescription "The agreed-upon plan for loan repayments over time." .
+ex:entity18 a ex:Entity ; rdfs:label "Loan Status" ; ex:hasDescription "An indicator of whether a loan is active, paid off, or defaulted." .
+ex:entity19 a ex:Entity ; rdfs:label "Annual Income" ; ex:hasDescription "The yearly income of a borrower used for credit assessment." .
+ex:entity20 a ex:Entity ; rdfs:label "Loan Purpose" ; ex:hasDescription "The intended use of the borrowed funds." .
