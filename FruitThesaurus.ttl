@@ -1,0 +1,98 @@
+@prefix : <http://example.org/fruit#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Ontology Header
+#################################################################
+
+:FruitOntology a owl:Ontology ;
+    rdfs:label "Fruit Ontology"@en ;
+    owl:versionIRI <http://example.org/fruit/1.0> .
+
+#################################################################
+# OWL Classes (Taxonomy)
+#################################################################
+
+:Food a owl:Class ;
+    rdfs:label "Food"@en .
+
+:Fruit a owl:Class ;
+    rdfs:label "Fruit"@en ;
+    rdfs:subClassOf :Food .
+
+:Apple a owl:Class ;
+    rdfs:label "Apple"@en ;
+    rdfs:subClassOf :Fruit .
+
+#################################################################
+# OWL Individuals (Apple Instances)
+#################################################################
+
+:GrannySmith a :Apple ;
+    rdfs:label "Granny Smith"@en ;
+    :color "green" ;
+    :origin "Australia" ;
+    :hasSweetness "medium" .
+
+:RedDelicious a :Apple ;
+    rdfs:label "Red Delicious"@en ;
+    :color "red" ;
+    :origin "USA" ;
+    :hasSweetness "high" .
+
+:Fuji a :Apple ;
+    rdfs:label "Fuji"@en ;
+    :color "reddish-yellow" ;
+    :origin "Japan" ;
+    :hasSweetness "very high" .
+
+#################################################################
+# Datatype Properties
+#################################################################
+
+:color a owl:DatatypeProperty ;
+    rdfs:domain :Fruit ;
+    rdfs:range xsd:string .
+
+:origin a owl:DatatypeProperty ;
+    rdfs:domain :Fruit ;
+    rdfs:range xsd:string .
+
+:hasSweetness a owl:DatatypeProperty ;
+    rdfs:domain :Fruit ;
+    rdfs:range xsd:string .
+
+#################################################################
+# SKOS Thesaurus
+#################################################################
+
+:FruitConcept a skos:Concept ;
+    skos:prefLabel "fruit"@en ;
+    skos:definition "The sweet and fleshy product of a tree or other plant that contains seed."@en ;
+    skos:narrower :AppleConcept ;
+    skos:exactMatch :Fruit .
+
+:AppleConcept a skos:Concept ;
+    skos:prefLabel "apple"@en ;
+    skos:altLabel "malus domestica"@la ;   # Latin name
+    skos:altLabel "APL"@en ;               # Acronym
+    skos:altLabel "orchard apple"@en ;     # Synonym
+    skos:hiddenLabel "appl"@en ;           # Typo handling
+    skos:broader :FruitConcept ;
+    skos:definition "A round fruit with red or green skin and firm white flesh."@en ;
+    skos:exactMatch :Apple .
+
+#################################################################
+# Concept Scheme
+#################################################################
+
+:FruitThesaurus a skos:ConceptScheme ;
+    skos:prefLabel "Fruit Thesaurus"@en ;
+    skos:hasTopConcept :FruitConcept .
+
+:FruitConcept skos:inScheme :FruitThesaurus .
+:AppleConcept skos:inScheme :FruitThesaurus .
